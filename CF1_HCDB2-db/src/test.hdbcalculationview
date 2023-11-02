@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="test" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" hierarchyGeneration="SQL" outputViewType="Projection" cacheInvalidationPeriod="NONE" enforceSqlExecution="true">
+<descriptions defaultDescription="test.hdbcalculationview"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="C1H1HDI1TABLE">
+    <resourceUri>C1H1HDI1TABLE</resourceUri>
+  </DataSource>
+</dataSources>
+<snapshotProcedures/>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1">
+    <viewAttributes>
+      <viewAttribute id="SalesOrderId"/>
+      <viewAttribute id="ProductId"/>
+      <viewAttribute id="Quantity"/>
+      <viewAttribute id="DeliveryDate"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="C1H1HDI1TABLE"/>
+  </calculationView>
+</calculationViews>
+<logicalModel id="Projection_1">
+  <attributes>
+    <attribute id="SalesOrderId" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Sales Order ID"/>
+      <keyMapping columnObjectName="Projection_1" columnName="SalesOrderId"/>
+    </attribute>
+    <attribute id="ProductId" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Product ID"/>
+      <keyMapping columnObjectName="Projection_1" columnName="ProductId"/>
+    </attribute>
+    <attribute id="Quantity" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Quantity"/>
+      <keyMapping columnObjectName="Projection_1" columnName="Quantity"/>
+    </attribute>
+    <attribute id="DeliveryDate" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Scheduled Delivery Date"/>
+      <keyMapping columnObjectName="Projection_1" columnName="DeliveryDate"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+  
+    <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="150" y="217"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

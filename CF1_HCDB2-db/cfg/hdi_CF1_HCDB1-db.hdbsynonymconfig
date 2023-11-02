@@ -1,0 +1,8 @@
+{
+    "C1H1HDI1TABLE": {
+        "target": {
+            "schema.configure": "hdi_CF1_HCDB1-db/schema",
+            "object": "C1H1HDI1TABLE"
+        }
+    }
+}
